@@ -1,0 +1,25 @@
+{
+  "name": "plexcompare",
+  "authors": [
+    "Bryce Bedwell <brycebedwell@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
+    "angular-uuid-service": "^0.1.0",
+    "xml2json": "^1.1.1",
+    "angular-xml2json": "^0.0.2",
+    "lodash": "^4.16.6"
+  }
+}

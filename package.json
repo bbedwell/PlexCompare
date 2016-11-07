@@ -1,0 +1,13 @@
+{
+  "name": "plexcompare",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-if": "^2.0.2",
+    "gulp-inject": "^4.1.0",
+    "gulp-install": "^0.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-useref": "^3.1.2"
+  }
+}

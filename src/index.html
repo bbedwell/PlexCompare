@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .is-disabled {
+        opacity: .5;
+        pointer-events: none;
+      }
+      button.toggled {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body ng-app="plexcompare">
+    <div>
+      <ui-view></ui-view>
+    </div>
+
+    <!-- build:js app.js -->
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-uuid-service/angular-uuid-service.js"></script>
+    <script src="bower_components/angular-xml2json/angular-xml2json.js"></script>
+    <script src="app.js"></script>
+    <script src="services/auth.js"></script>
+    <script src="services/plex.js"></script>
+    <script src="login/login.js"></script>
+    <script src="home/home.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
