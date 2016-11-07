@@ -8,6 +8,7 @@ before_script:
 script: bash deploy.sh
 env:
   global:
+  - ENCRYPTION_LABEL: "89b7d16214d8"
   - COMMIT_AUTHOR_EMAIL: "brycebedwell@gmail.com"
 branches:
   only:
