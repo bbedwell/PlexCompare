@@ -2,21 +2,19 @@ angular
   .module('plexcompare', ['ui.router', 'uuid', 'angularXml2json'])
   .config(['$locationProvider', '$stateProvider', '$urlRouterProvider', function($locationProvider, $stateProvider, $urlRouterProvider) {
 
-    // $locationProvider.html5Mode(true);
-
     $stateProvider
       .state('login', {
         url: '/login',
         controller: 'LoginCtrl',
-        templateUrl: '/login/login.html'
+        templateUrl: 'login/login.html'
       })
       .state('home', {
-        url: '/home',
+        url: '/',
         controller: 'HomeCtrl',
-        templateUrl: '/home/home.html'
+        templateUrl: 'home/home.html'
       });
 
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/');
   }])
   .run(['$rootScope', '$location', '$state', 'AuthService', function($rootScope, $location, $state, AuthService) {
     $rootScope.$on('$stateChangeStart', function(e, toState, toParams, fromState, fromParams) {
