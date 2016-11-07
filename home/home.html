@@ -1,0 +1,35 @@
+<section ng-class="{ 'is-disabled': sourceServer }">
+  <h1>1. Select A Source Server</h1>
+  <div ng-repeat="server in servers">
+    <button ng-click="setSource(server);">{{ generatePhrasing(server); }}</button>
+  </div>
+</section>
+
+<section ng-show="sourceServer">
+  <h1>2. Select Servers To Compare</h1>
+  <div ng-repeat="server in servers | filter:{ clientidentifier: '!' + sourceServer.clientidentifier }">
+    <button ng-click="toggleComparison(server); selected = !selected;" ng-class="{ toggled: selected }">{{ generatePhrasing(server); }}</button>
+  </div>
+</section>
+
+<section ng-show="comparisonServers.length > 0">
+  <h1>3. Compare</h1>
+  <button ng-click="doComparison(sourceServer, comparisonServers)">Compare!</button>
+</section>
+
+<section ng-show="movies.length > 0">
+  <table ng-show="movies">
+    <thead>
+      <tr>
+        <td>Title</td>
+        <td>Year</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="movie in movies">
+        <td>{{ movie.title }}</td>
+        <td>{{ movie.year }}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>

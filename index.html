@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .is-disabled {
+        opacity: .5;
+        pointer-events: none;
+      }
+      button.toggled {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body ng-app="plexcompare">
+    <div>
+      <ui-view></ui-view>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
